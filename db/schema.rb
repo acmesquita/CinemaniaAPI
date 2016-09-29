@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160929193429) do
+ActiveRecord::Schema.define(version: 20160929194611) do
 
   create_table "cinemas", force: :cascade do |t|
     t.string   "nome"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20160929193429) do
     t.float    "preco"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "cinemas_id"
+    t.index ["cinemas_id"], name: "index_salas_on_cinemas_id"
   end
 
   create_table "sessaos", force: :cascade do |t|
@@ -43,6 +45,10 @@ ActiveRecord::Schema.define(version: 20160929193429) do
     t.string   "tipo_exibicao"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "salas_id"
+    t.integer  "filmes_id"
+    t.index ["filmes_id"], name: "index_sessaos_on_filmes_id"
+    t.index ["salas_id"], name: "index_sessaos_on_salas_id"
   end
 
 end
