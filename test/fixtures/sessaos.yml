@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  inicio: 2016-09-29
+  dublado: false
+  tipo_exibicao: MyString
+
+two:
+  inicio: 2016-09-29
+  dublado: false
+  tipo_exibicao: MyString

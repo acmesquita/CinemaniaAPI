@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Inicio:</strong>
+  <%= @sessao.inicio %>
+</p>
+
+<p>
+  <strong>Dublado:</strong>
+  <%= @sessao.dublado %>
+</p>
+
+<p>
+  <strong>Tipo exibicao:</strong>
+  <%= @sessao.tipo_exibicao %>
+</p>
+
+<%= link_to 'Edit', edit_sessao_path(@sessao) %> |
+<%= link_to 'Back', sessaos_path %>
